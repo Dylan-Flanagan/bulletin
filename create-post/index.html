@@ -11,8 +11,11 @@
         <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
         <!-- js -->
-        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="create-post.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,21 +43,21 @@
         </header>
 
         <main>
-            <form id="post-editor">
+            <form id="post-form">
                 <label>
                     <div>Title</div>
-                    <input name="Title" required placeholder="What is the Title for Your Post?" />
+                    <input name="title" required placeholder="What is the Title for Your Post?" />
                 </label>
                 <label>
                     <div>Description</div>
                     <textarea
-                        name="Description"
+                        name="description"
                         required
                         placeholder="Describe Your Post"
                     ></textarea>
                 </label>
                 <label>
-                    <select name="Category">
+                    <select name="category">
                         Category>
                         <option>📺 Entertainment</option>
                         <option>🤑 For Sale</option>
