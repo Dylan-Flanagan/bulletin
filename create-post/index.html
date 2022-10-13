@@ -34,11 +34,52 @@
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
             <p class="title">Supabase Web App</p>
             <nav>
-                <a href="/">Home</a>
+                <a href="/">Create a Post</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <form id="post-editor">
+                <label>
+                    <div>Title</div>
+                    <input name="Title" required placeholder="What is the Title for Your Post?" />
+                </label>
+                <label>
+                    <div>Description</div>
+                    <textarea
+                        name="Description"
+                        required
+                        placeholder="Describe Your Post"
+                    ></textarea>
+                </label>
+                <label>
+                    <select name="Category">
+                        Category>
+                        <option>📺 Entertainment</option>
+                        <option>🤑 For Sale</option>
+                        <option>🎭 Events</option>
+                        <option>🗞 News</option>
+                    </select>
+                </label>
+                <label>
+                    <div>Contact</div>
+                    <input name="contact" id="contact-input" />
+                </label>
+                <!-- <label>
+                    <div>Image</div>
+                    <input
+                        id="image-input"
+                        name="image"
+                        type="file"
+                        required
+                        placeholder="Upload an
+                    image..."
+                    />
+                </label> -->
+                <button>Add Post</button>
+                <p id="error-display" class="error"></p>
+            </form>
+        </main>
     </body>
 </html>
