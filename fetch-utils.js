@@ -36,6 +36,8 @@ export async function getPost() {
     return await client.from('posts').select('*');
 }
 
+
+
 export async function uploadImage(bucketName, imagePath, imageFile) {
     const bucket = client.storage.from(bucketName);
 
